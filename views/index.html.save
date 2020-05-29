@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shorter</title>
+    <style>
+        body {
+            margin: 0;
+            background: #222;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: rgb(97, 197, 82);
+        }
+
+        header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .logo {
+            float: left;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            border: 2px black solid;
+            border-radius: 10%;
+            margin: 10px 0;
+        }
+
+        div p {
+            font-weight: 700;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-left: 70px;
+            padding-top: 25px;
+            position: relative;
+        }
+
+        nav a {
+            color: #444;
+            padding: 15px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        nav a:after {
+            content: "";
+            display: block;
+            height: 5px;
+            width: 0%;
+            background-color: black;
+            position: absolute;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        header~p {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            position: fixed;
+            top: calc(50% - 70px);
+ 
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <p>URL SHORTER</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <p>Paste link below and click "Go Short!" button.</p>
+    <input>
+    <button id="button">Go Short!</button>
+    <div>
+        <p id="linkplace">Short link will show up here.</p>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
+
